@@ -1,0 +1,37 @@
+
+ -- Running  Naive Bayes without NLTK Porter Stemmer, just with default analyzer of Count Vectorizer --
+
+/usr/bin/python3.5 /home/rakesh/PyCharm_Exercise/DataScience-Python3/SpamFilterCodetest.py
+Started reading spam .. 
+2399  files
+Now Started reading Ham .. 
+6952  files
+Count vectorizing data.. 
+Vectorizer output: (9351, 124705)
+Time to read and vectorize is: 6.599233865737915
+Time to fit using Multinomial Naive Bayes is: 6.599233865737915
+Overall time: 6.689846515655518
+Precision: 0.9755147468
+Accuracy: 0.978614200171
+F1-Score: 0.985939257593
+
+
+ -- Running  Naive Bayes with NLTK Porter Stemmer --
+
+/usr/bin/python3.5 /home/rakesh/PyCharm_Exercise/DataScience-Python3/SpamFilterCodetest.py
+Started reading spam .. 
+2399  files
+Now Started reading Ham .. 
+6952  files
+Count vectorizing data.. 
+Vectorizer output: (9351, 111329)
+Time to read and vectorize is: 46.918195724487305
+Time to fit using Multinomial Naive Bayes is: 46.918195724487305
+Overall time: 46.99958395957947
+Precision: 0.970473537604
+Accuracy: 0.974764756202
+F1-Score: 0.983347445668
+
+----
+So, conclusion is that using the NLTK Porter Stemmer does reduce the features due to stemming, it does not increase prediction metrics
+On the contrary, we see a slight dip in metrics as well as increased time to train due to running stemming on each word
